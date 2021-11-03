@@ -20,7 +20,7 @@ def scrape_hashtags(tweet):
 def create_embed(tweet, the_boys):
     embed = DiscordEmbed(title="@" + tweet.user.screen_name, description="[Click Here To Tweet And Enter!](https://twitter.com/intent/tweet?text="+the_boys+")", color=0xf1c40f)
     embed.set_author(name='NEW FOOJI FROM:', icon_url='https://pbs.twimg.com/profile_images/1112870837093322756/0Q_XSAQk_400x400.png')
-    embed.set_footer(text='Monitor made by gray#8532')
+    embed.set_footer(text='Monitor made by doppy#4721')
     return embed
 
 def create_webhook(embed, webhook_urls):
@@ -43,7 +43,7 @@ def original_tweet_send(tweet, webhook_urls):
 
 def user_entry_send(tweet, the_boys, webhook_urls):
     embed = create_embed(tweet, the_boys)
-    webhook = create_webhook(embed, webhook_urls)
+    webhook = create_webhook(embed, webhook_urls, content= '@&905493359383154729')
     response = webhook.execute()
 
 webhook_urls = ['https://discord.com/api/webhooks/903757117645815808/LljOoQE0Ha118AoVFEbZfR25ajiJLBJGMvaYMKxCmXVSzvFCPDOKh2RN-BWnYMcx-Dni']
