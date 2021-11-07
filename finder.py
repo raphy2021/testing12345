@@ -43,14 +43,8 @@ def original_tweet_send(tweet, webhook_urls):
 
 def user_entry_send(tweet, the_boys, webhook_urls):
     embed = create_embed(tweet, the_boys)
-    webhook = create_webhook(embed, webhook_urls, content= '@&905493359383154729')
+    webhook = create_webhook(embed, webhook_urls, content= "<@&905493359383154729>")
     response = webhook.execute()
-
-webhook_urls = ['https://discord.com/api/webhooks/903757117645815808/LljOoQE0Ha118AoVFEbZfR25ajiJLBJGMvaYMKxCmXVSzvFCPDOKh2RN-BWnYMcx-Dni']
-
-webhook = DiscordWebhook(url=webhook_urls, content="Fooji Detector is On! This is a test webhook")
-
-response = webhook.execute()
 
 found = set()
 found_content = set()
